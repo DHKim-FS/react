@@ -1,23 +1,24 @@
-import React, { Component } from 'react'
-import './ExpenseItem.css'
-import { MdEdit, MdDelete } from 'react-icons/md'
+import React, { Component } from "react";
+import "./ExpenseItem.css";
+import { MdEdit, MdDelete } from "react-icons/md";
 
-export class ExpeseItem extends Component {
-  render() {
-    return (
-      <li className='item'>
-        <div className='info'>
-          <span className='expense'>{this.props.expense.charge}</span>
-          <span className='amount'>{this.props.expense.amount}</span>
-        </div>
-        <div>
-          <button className='edit-btn'><MdEdit /></button>
-          <button className='clear-btn' onClick={() => console.log(`${this.props.expense.id} clicked`) }><MdDelete /></button>
-        </div>
+const ExpeseItem = ({ expense, handleDelete }) => {
+  return (
+    <li className="item">
+      <div className="info">
+        <span className="expense">{expense.charge}</span>
+        <span className="amount">{expense.amount}</span>
+      </div>
+      <div>
+        <button className="edit-btn">
+          <MdEdit />
+        </button>
+        <button className="clear-btn" onClick={() => handleDelete(expense.id)}>
+          <MdDelete />
+        </button>
+      </div>
+    </li>
+  );
+};
 
-      </li>
-    )
-  }
-}
-
-export default ExpeseItem
+export default ExpeseItem;
