@@ -17,6 +17,10 @@ const App = () => {
     { id: 3, charge: "food", amount: 1200 },
   ]);
 
+  const clearItems = () => {
+    setExpenses([]);
+  };
+
   const [alert, setAlert] = useState({ show: false });
 
   const handleCharge = (e) => {
@@ -97,9 +101,10 @@ const App = () => {
       <div style={{ width: "100%", backgroundColor: "white", padding: "1rem" }}>
         {/* { Expense List } */}
         <ExpenseList
-          initialExpenses={expenses}
+          expenses={expenses}
           handleDelete={handleDelete}
           handleEdit={handleEdit}
+          clearItems={clearItems}
         />
       </div>
 
