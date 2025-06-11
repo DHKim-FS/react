@@ -2,7 +2,7 @@
   "name": "react-tictactoe-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://DHKim-FS/github.io/react",
+  "homepage": "https://DHKim-FS.github.io/react",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
